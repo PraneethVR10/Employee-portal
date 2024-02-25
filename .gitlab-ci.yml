@@ -20,7 +20,13 @@ pytest:
     - pip install pytest-html
     - pip install -r requirements.txt
   script:
-    - find .
+    - |
+      echo "Current directory content:"
+      ls -R
+      echo "---------------------------"
+      echo "Contents of pytest_reports/ directory:"
+      ls -R pytest_reports/
+      pytest --html=pytest_reports/pytest-report.html --self-contained-html
     - pytest --html=pytest_reports/pytest-report.html --self-contained-html
   artifacts:
     when: always
