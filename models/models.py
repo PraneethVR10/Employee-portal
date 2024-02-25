@@ -11,4 +11,3 @@ class Employee(db.Model):
     phone = db.Column(db.Integer)
     salary = db.Column(db.Integer)
     department = db.Column(db.String(50))
-
