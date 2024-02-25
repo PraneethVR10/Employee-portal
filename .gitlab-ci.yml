@@ -20,7 +20,7 @@ pytest:
     - pip install pytest-html
     - pip install -r requirements.txt
   script:
-    - ls -R
+    - find .
     - pytest --html=pytest_reports/pytest-report.html --self-contained-html
   artifacts:
     when: always
