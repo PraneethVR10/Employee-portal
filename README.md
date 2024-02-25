@@ -1,0 +1,1 @@
+use flask shell to initialise the employee data with db.create_all()
