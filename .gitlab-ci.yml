@@ -59,7 +59,7 @@ deploy_production:
   script:
   - docker pull $IMAGE_TAG
   - docker tag $IMAGE_TAG $HEROKU_PRODUCTION
-  - docker login -u _ -p $HEROKU_PRODCUTION_API_KEY registry.heroku.com
+  - docker login -u _ -p $HEROKU_PRODUCTION_API_KEY registry.heroku.com
   - docker push $HEROKU_PRODUCTION
   - docker run --rm -e HEROKU_API_KEY=$HEROKU_PRODUCTION_API_KEY wingrunr21/alpine-heroku-cli container:release web --app $PRODUCTION_APP
   - echo "App deployed to deployment server at https://$PRODUCTION_APP.herokuapp.com/"
